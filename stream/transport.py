@@ -1,5 +1,7 @@
 # -*- coding:utf8 -*-
 
+import json
+
 from .connection import Urllib3HttpConnection
 from .serializer import JSONSerializer
 from .exceptions import StreamException
@@ -87,5 +89,5 @@ class Transport(object):
         response = {}
         response['code'] = status
         response['message'] = reason
-        response['result'] = data
-        return response
+        response['result'] = json.loads(data)
+        return json.dumps(response)

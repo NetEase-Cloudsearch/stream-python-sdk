@@ -27,7 +27,7 @@ setup(
     name="stream-python-sdk",
     description="Stream SDK",
     license="MIT License",
-    url="https://c.163.com/",
+    url="https://github.com/NetEase-Cloudsearch/stream-python-sdk",
     long_description=long_description,
     version=version,
     author="Stream Developer",

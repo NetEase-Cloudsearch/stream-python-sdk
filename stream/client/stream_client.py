@@ -1,7 +1,5 @@
 # -*- coding:utf8 -*-
 
-import json
-
 from .utils import HTTP_METHOD
 from ..transport import Transport
 from ..exceptions import InvalidParameter
@@ -61,7 +59,7 @@ class StreamClient(object):
             body=body, headers=headers
         )
 
-        return json.dumps(response)
+        return response
 
     def get_logs(self, subscription_name, logs_position, limit, **kwargs):
         """
@@ -94,4 +92,4 @@ class StreamClient(object):
             body=body, headers=headers
         )
 
-        return json.dumps(response)
+        return response
