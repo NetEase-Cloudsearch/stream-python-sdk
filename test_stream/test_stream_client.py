@@ -27,9 +27,8 @@ class TestClient():
     def test_get_logs(self):
         """ Get_logs."""
         response = self.test_get_subscription_position()
-        response_obj = json.loads(response)
-        result_obj = json.loads(response_obj['result'])
-        self.logs_position = result_obj['position']
+        response = json.loads(response)
+        self.logs_position = response['result']['position']
         response = self.client.get_logs(
             subscription_name=self.topic_name,
             logs_position=self.logs_position,
